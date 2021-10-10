@@ -1,13 +1,20 @@
 // tailwind.config.js
 
 module.exports = {
-	purge: ["./src/**/*.{ts,tsx}"],
-	theme: {},
-	variants: {
-		extend: {
-			backgroundColor: ["responsive", "hover", "focus", "group-hover"],
-			textColor: ["responsive", "hover", "focus", "group-hover"],
-		},
-	},
-	plugins: [],
+  darkMode: "media",
+  purge: ["./src/**/*.{ts,tsx}"],
+  theme: {
+    colors: {
+      // Configure your color palette here
+      cyan: "#00FFFF",
+      seashore: "#6EA1C3",
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+      textColor: ["responsive", "hover", "focus", "group-hover"],
+    },
+  },
+  plugins: [],
 };
