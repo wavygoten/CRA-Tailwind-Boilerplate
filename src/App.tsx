@@ -5,7 +5,7 @@ import Input from "./components/Input";
 function App() {
 	return (
 		<>
-			<Input type="email" placeholder="jane@example.com" />
+			<Input type="email" placeholder="jane@example.com" primary />
 		</>
 	);
 }
