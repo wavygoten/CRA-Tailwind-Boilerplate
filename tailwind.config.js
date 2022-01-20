@@ -2,7 +2,16 @@
 
 module.exports = {
 	purge: ["./src/**/*.{ts,tsx}"],
-	theme: {},
+	theme: {
+		extend: {
+			colors: {
+				// new
+				primary: "var(--color-primary)", // new
+				secondary: "var(--color-secondary)", // new
+				whiteAlt: "var(--color-white-alt)", // new
+			}, // new
+		},
+	},
 	variants: {
 		extend: {
 			backgroundColor: ["responsive", "hover", "focus", "group-hover"],

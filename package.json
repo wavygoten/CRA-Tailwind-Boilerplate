@@ -10,19 +10,17 @@
 		"@types/node": "^12.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
-		"autoprefixer": "^10.3.7",
-		"postcss": "^8.3.9",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "4.0.3",
-		"tailwindcss": "^2.2.16",
+		"styled-components": "^5.3.3",
+		"twin.macro": "^2.8.2",
 		"typescript": "^4.1.2",
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"build:tailwind": "tailwindcss build -i src/tailwind.css -o src/tailwind.output.css",
-		"start": "yarn build:tailwind && react-scripts start",
-		"build": "NODE_ENV=production yarn build:tailwind && react-scripts build",
+		"start": "cross-env NODE_ENV=development react-scripts start",
+		"build": "cross-env NODE_ENV=production react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -44,5 +42,14 @@
 			"last 1 safari version"
 		]
 	},
-	"devDependencies": {}
+	"babelMacros": {
+		"twin": {
+			"config": "./tailwind.config.js",
+			"preset": "styled-components"
+		}
+	},
+	"devDependencies": {
+		"@types/styled-components": "^5.1.20",
+		"cross-env": "^7.0.3"
+	}
 }
